@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>Signup - Login page</title>
+		<link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<style>
+	 body{
+	 background-image: url(or.jpg);
+	 height: 100vh;
+	 background-size:cover;
+	 background-position: center;
+ }
+ 
+ .login-page{
+	 width: 360px;
+	 padding: 10% 0 0;
+	 margin: auto;	 
+	 
+ }
+ 
+ .form{
+	 position: relative;
+	 z-index: 1;
+	 background: rgba(255,204,0,0.5);
+	 max-width: 260px;
+	 margin: 0 auto 100px;
+	 padding: 45px;
+	 text-align: center;
+	 
+ }
+ 
+ .form input{
+	 font-family: "Roboto", sans-serif;
+	 outline:1;
+	 background: #f2f2f2;
+	 width: 100%;
+	 border: 0;
+	 margin:0 0 15px;
+	 padding: 15px;
+	 box-sizing: border-box;
+	 font-size: 14px;
+	 	 
+ }
+ 
+ 
+ .form button{
+	 font-family: "Roboto", sans-serif;
+	 text-transform: uppercase;
+	 outline:0;
+	 background: #4CAF50;
+	 width: 100%;
+	 border: 0;
+	 padding: 15px;
+	 color: #FFFFFF;
+	 font-size: 14px;
+	 cursor: pointer;
+ }
+ 
+ 
+ 
+.form button:hover,.form button:active{
+	background: #43A047;
+		
+	
+}
+
+.form .message{
+	margin:15px 0 0;
+	color: aliceblue;
+	font-size: 12px;
+}
+	
+.form .message a{
+	color: #2320c7;
+	text-decoration:none ;
+}
+	
+.form .Signup-form{
+	display:none;
+}
+
+	
+</style>
+  </head>
+  <body>
+  <div class="login-page" >
+  <div class="form">
+	<form class="Signup-form" action ="signup.php" method="post">
+	<input type="text" placeholder="Username" name="Username" id="Username"/>
+	<input type="text" placeholder="email_id" name="email_id" id="email_id"/>
+	<input type="password" placeholder="password" name="password" id="password"/>
+	<button>
+	Signup
+	</button>
+	<p class="message"> Already have an account? <a href="#"> Login </a>
+	</p>
+	</form>
+	
+	<form class="login-form" action ="login.php" method="post">
+    <input type="text" placeholder="Username" name="Username" id="Username"/>
+	<input type="password" placeholder="password" name="password" id="password" />
+	<button> Login </button>
+	<p class="message"> Don't have an account? <a href="#"> Signup </a>
+	</p>
+	
+	</form>
+	</div>
+	</div>
+	
+	<script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+	</script>
+	
+	<script>
+	$('.message a').click(function(){
+	$('form').animate({height:"toggle",opacity:"toggle"},"slow");
+	});
+	
+	</script>
+
+ 
+ 
+  </body>
+</html>
